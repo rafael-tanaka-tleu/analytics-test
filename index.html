@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste GA4</title>
+    <title>GA4 Test</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>
@@ -11,13 +11,13 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        // Substitua 'GA_MEASUREMENT_ID' pelo seu ID de medição
-        gtag('config', 'GA_MEASUREMENT_ID');
+        // Replace 'GA_MEASUREMENT_ID' with your actual measurement ID
+        gtag('config', 'G-964Z1V80PD');
 
-        // Envio do evento customizado 'tests assigned' antes do page view
+        // Sending the custom event 'tests assigned' before the page view
         gtag('event', 'tests_assigned', {'event_category': 'Experiment', 'event_label': 'Pre-Page Load'});
 
-        // Aguarda 5 segundos antes de enviar o evento de pageview
+        // Wait for 5 seconds before sending the page view event
         setTimeout(function(){
             gtag('event', 'page_view');
         }, 5000);
