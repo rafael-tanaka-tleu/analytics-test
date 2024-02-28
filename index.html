@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GA4 Test</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-964Z1V80PD"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        // Replace 'GA_MEASUREMENT_ID' with your actual measurement ID
-        gtag('config', 'G-964Z1V80PD');
+        // Replace 'G-964Z1V80PD' with your actual measurement ID
+        gtag('config', 'G-964Z1V80PD', { 'send_page_view': false });
 
         // Sending the custom event 'tests assigned' before the page view
         gtag('event', 'tests_assigned', {'event_category': 'Experiment', 'event_label': 'Pre-Page Load'});
 
         // Wait for 5 seconds before sending the page view event
         setTimeout(function(){
-            gtag('event', 'page_view');
+            gtag('event', 'page_view', { 'page_title' : document.title, 'page_location': window.location.href });
         }, 5000);
     </script>
 </head>
